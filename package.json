@@ -8,6 +8,7 @@
         "yarn": ">=1.10.0"
     },
     "scripts": {
+        "lint:css": "stylelint \"src/**/*.scss\"",
         "setup": "yarn install --frozen-lockfile",
         "start": "yarn setup && yarn start:examples",
         "start:examples": "cross-env NODE_ENV=development styleguidist server"
@@ -17,10 +18,17 @@
         "@babel/preset-env": "^7.18.2",
         "@babel/preset-react": "^7.17.12",
         "@babel/preset-typescript": "^7.17.12",
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
         "babel-loader": "^8.2.5",
         "classnames": "^2.3.1",
         "cross-env": "^7.0.3",
         "css-loader": "^6.7.1",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
+        "postcss": "^8.4.14",
+        "postcss-scss": "^4.0.4",
+        "prettier": "^2.7.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-intl": "^6.0.4",
@@ -28,6 +36,10 @@
         "sass": "^1.53.0",
         "sass-loader": "^12.6.0",
         "style-loader": "^3.3.1",
+        "stylelint": "^14.9.1",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-standard": "^26.0.0",
+        "stylelint-order": "^5.0.0",
         "typescript": "^4.7.4",
         "webpack": "^5.73.0"
     },
@@ -44,6 +56,29 @@
             "last 1 Chrome versions",
             "last 1 Firefox versions",
             "last 1 Safari versions"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ],
+        "rules": {
+            "subject-case": [
+                0,
+                "always"
+            ]
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -e",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.scss": [
+            "prettier --write",
+            "yarn lint:css"
         ]
     }
 }
