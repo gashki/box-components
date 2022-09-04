@@ -7,6 +7,7 @@
             { "ignoreAtRules": ["content", "extend", "function", "include", "mixin", "return"] }
         ],
         "font-weight-notation": "named-where-possible",
+        "keyframes-name-pattern": null,
         "indentation": 4,
         "order/order": ["dollar-variables", "custom-properties", "declarations", "rules"],
         "selector-class-pattern": null,
