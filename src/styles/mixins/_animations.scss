@@ -1,0 +1,12 @@
+@import '../common/animations';
+@import '../constants/animations';
+
+@mixin hui-animation-fadeIn($duration) {
+    animation: hui-fadeIn $hui-timingFunction $duration;
+}
+
+@mixin hui-transition($duration, $properties...) {
+    transition-timing-function: $hui-timingFunction;
+    transition-duration: $duration;
+    transition-property: $properties;
+}
