@@ -1,0 +1,16 @@
+// Z-indexes
+$hui-Modal-zIndex: 160 !default;
+$hui-Menu-zIndex: 170 !default;
+$hui-Notification-zIndex: 180 !default;
+$hui-Overlay-zIndex: 190 !default;
+$hui-Tooltip-zIndex: 190 !default;
+
+// Borders
+$hui-border-radius-size: 4px;
+$hui-border-radius-size-med: $hui-border-radius-size * 1.5;
+$hui-border-radius-size-large: $hui-border-radius-size * 2;
+$hui-border-radius-size-xlarge: $hui-border-radius-size * 3;
+
+// Spacing
+$hui-grid-unit: 4px !default;
+$hui-grid-unit-px: 4 !default;

@@ -2,10 +2,12 @@
     "customSyntax": "postcss-scss",
     "extends": ["stylelint-config-standard", "stylelint-config-rational-order"],
     "rules": {
+        "alpha-value-notation": null,
         "at-rule-no-unknown": [
             true,
             { "ignoreAtRules": ["content", "extend", "function", "include", "mixin", "return"] }
         ],
+        "color-function-notation": null,
         "font-weight-notation": "named-where-possible",
         "keyframes-name-pattern": null,
         "indentation": 4,
