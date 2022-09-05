@@ -1,0 +1,28 @@
+@import '../constants/colors';
+@import '../constants/typography';
+
+@mixin hui-fontFamily {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@mixin hui-fontAliasing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+@mixin hui-commonFont {
+    @include hui-fontAliasing;
+    @include hui-fontFamily;
+
+    font-weight: normal;
+    font-size: $hui-fontSize;
+}
+
+@mixin hui-commonTypography {
+    @include hui-commonFont;
+
+    color: $hui-gray;
+    line-height: $hui-lineHeight;
+    letter-spacing: $hui-letterSpacing;
+}

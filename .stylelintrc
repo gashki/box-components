@@ -5,7 +5,9 @@
         "alpha-value-notation": null,
         "at-rule-no-unknown": [
             true,
-            { "ignoreAtRules": ["content", "extend", "function", "include", "mixin", "return"] }
+            {
+                "ignoreAtRules": ["content", "extend", "function", "include", "mixin", "return"]
+            }
         ],
         "color-function-notation": null,
         "font-weight-notation": "named-where-possible",
@@ -14,6 +16,12 @@
         "order/order": ["dollar-variables", "custom-properties", "declarations", "rules"],
         "selector-class-pattern": null,
         "selector-id-pattern": null,
-        "string-quotes": null
+        "string-quotes": null,
+        "value-keyword-case": [
+            "lower",
+            {
+                "camelCaseSvgKeywords": true
+            }
+        ]
     }
 }

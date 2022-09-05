@@ -1,0 +1,110 @@
+@import '../mixins/typography';
+
+html {
+    @include hui-fontAliasing;
+
+    font-size: 100%;
+    text-size-adjust: 100%;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.004);
+}
+
+body {
+    @include hui-commonTypography;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+    color: inherit;
+    font-weight: normal;
+    font-family: inherit;
+    line-height: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+small {
+    font-size: 85%;
+}
+
+dl,
+ol,
+ul {
+    margin: 0 0 10px 25px;
+    padding: 0;
+}
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+    margin-bottom: 0;
+}
+
+li {
+    line-height: 20px;
+}
+
+button,
+div[contentEditable='true'],
+input,
+select,
+textarea {
+    @include hui-fontFamily;
+
+    font-size: 99%;
+}
+
+.hui-text-ellipsis {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
