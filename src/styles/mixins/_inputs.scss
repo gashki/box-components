@@ -2,7 +2,7 @@
 @import '../constants/colors';
 @import '../constants/layout';
 
-@mixin hui-input {
+@mixin hui-textInput {
     padding: 7px;
     color: $hui-gray;
     border: 1px solid $hui-gray-20;
@@ -12,12 +12,12 @@
     -webkit-font-smoothing: antialiased;
 }
 
-@mixin hui-input-onFocus {
+@mixin hui-textInput-onFocus {
     border: 1px solid $hui-primary-color;
     outline: 0;
     box-shadow: none;
 }
 
-@mixin hui-input-onHover {
+@mixin hui-textInput-onHover {
     box-shadow: inset 0 1px 1px rgb(0, 0, 0, 0.15);
 }
