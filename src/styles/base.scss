@@ -1,6 +1,7 @@
 @import './reset';
-@import './variables';
+@import './variables'; // imports './common/theme'
 
+// Common
 @import './common/animations';
 @import './common/base';
 @import './common/inputs';
