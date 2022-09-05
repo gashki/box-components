@@ -11,9 +11,9 @@ input[type='tel'],
 input[type='text'],
 input[type='url'],
 textarea {
-    width: 262px;
-
     @include hui-textInput;
+
+    width: 262px;
 }
 
 input[type='search'] {
