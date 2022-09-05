@@ -1,0 +1,73 @@
+@import '../constants/colors';
+
+a,
+.hui-hyperlink {
+    color: $hui-blue;
+    text-decoration: none;
+}
+
+.hui-hyperlink {
+    display: inline;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    background: transparent none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    filter: none;
+}
+
+.hui-hyperlink:active,
+.hui-hyperlink:hover {
+    height: auto;
+    line-height: inherit;
+    background: transparent;
+    box-shadow: none;
+}
+
+.hui-hyperlink:active {
+    color: $hui-blue;
+    text-decoration: underline;
+}
+
+a:focus,
+.hui-hyperlink:focus {
+    text-decoration: underline;
+}
+
+a.hui-is-disabled,
+a.hui-is-disabled:active,
+a.hui-is-disabled:hover,
+.hui-hyperlink.hui-is-disabled,
+.hui-hyperlink.hui-is-disabled:active,
+.hui-hyperlink.hui-is-disabled:hover {
+    color: $hui-gray-50;
+    text-decoration: none;
+    cursor: default;
+}
+
+a.hui-is-disabled:focus,
+.hui-hyperlink.hui-is-disabled:focus {
+    text-decoration: underline;
+}
+
+.hui-hyperlink--plain {
+    color: inherit;
+}
+
+.hui-hyperlink--plain:active,
+.hui-hyperlink--plain:hover {
+    text-decoration: none;
+}
+
+.hui-hyperlink--plain.hui-is-disabled,
+.hui-hyperlink--plain.hui-is-disabled:active,
+.hui-hyperlink--plain.hui-is-disabled:hover {
+    color: $hui-gray-50;
+}
+
+a svg {
+    pointer-events: none;
+}
