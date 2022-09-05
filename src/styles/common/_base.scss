@@ -1,0 +1,6 @@
+@import '../mixins/layout';
+
+html,
+body {
+    @include hui-boxSizing;
+}
