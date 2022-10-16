@@ -1,0 +1,110 @@
+@import '../../styles/variables';
+
+$Switch-height: $hui-grid-unit * 5;
+$Switch-width: $Switch-height * 2;
+
+.hui-Switch {
+    margin-bottom: $hui-grid-unit * 5;
+}
+
+.hui-Switch--rightAligned {
+    .hui-Switch-label {
+        margin-right: auto;
+    }
+}
+
+.hui-Switch-field {
+    display: flex;
+
+    .hui-Switch--rightAligned & {
+        width: 100%;
+    }
+}
+
+.hui-Switch-checkbox {
+    // Checkbox element is hidden but tabbable
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.hui-Switch-input {
+    position: relative;
+    flex-shrink: 0;
+    width: $Switch-width;
+    height: $Switch-height;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        cursor: pointer;
+        content: '';
+    }
+
+    &::before {
+        width: 100%;
+        height: 100%;
+        background-color: $hui-gray-30;
+        border-radius: $Switch-height;
+        transition: background 0.4s;
+    }
+
+    &::after {
+        width: $Switch-height;
+        height: 100%;
+        background-color: $hui-white;
+        border: 1px solid $hui-gray-50;
+        border-radius: 50%;
+        transition: margin 0.4s;
+    }
+
+    & + .hui-Switch-label,
+    .hui-Switch-label + & {
+        margin-left: $hui-grid-unit * 2;
+    }
+
+    .hui-Switch-checkbox:checked ~ & {
+        &::before {
+            background-color: $hui-blue;
+        }
+
+        &::after {
+            margin-left: $Switch-height;
+        }
+    }
+
+    .hui-Switch-checkbox:disabled ~ & {
+        &::before,
+        &::after {
+            cursor: default;
+        }
+
+        &::before {
+            opacity: 0.5;
+        }
+
+        &::after {
+            background-color: $hui-gray-02;
+            border-color: $hui-gray-20;
+        }
+    }
+
+    .hui-Switch-checkbox:focus ~ & {
+        &::after {
+            border-color: $hui-blue;
+        }
+    }
+}
+
+.hui-Switch-description {
+    margin-top: $hui-grid-unit;
+    margin-left: $Switch-width + ($hui-grid-unit * 2);
+    color: $hui-gray-50;
+
+    .hui-Switch--rightAligned & {
+        margin-left: 0;
+    }
+}
