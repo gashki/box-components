@@ -8,6 +8,7 @@
         "yarn": ">=1.10.0"
     },
     "scripts": {
+        "build:colors": "node scripts/buildColors.ts",
         "lint:css": "stylelint \"src/**/*.scss\"",
         "setup": "yarn install --frozen-lockfile",
         "start": "yarn setup && yarn start:examples",
@@ -26,6 +27,7 @@
         "css-loader": "^6.7.1",
         "husky": "^8.0.1",
         "lint-staged": "^13.0.3",
+        "lodash": "^4.17.21",
         "postcss": "^8.4.14",
         "postcss-scss": "^4.0.4",
         "prettier": "^2.7.1",
@@ -35,6 +37,7 @@
         "react-styleguidist": "^11.2.0",
         "sass": "^1.53.0",
         "sass-loader": "^12.6.0",
+        "sass-variable-parser": "^1.2.2",
         "style-loader": "^3.3.1",
         "stylelint": "^14.9.1",
         "stylelint-config-rational-order": "^0.1.2",

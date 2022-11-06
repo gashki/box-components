@@ -1,0 +1,18 @@
+@import 'src/styles/base';
+
+.hui-colors-swatch {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 10px;
+
+    & > div {
+        margin: 10px;
+    }
+}
+
+.hui-colors-shade {
+    width: 200px;
+    height: 40px;
+    margin-bottom: $hui-grid-unit;
+    border-radius: $hui-borderRadius;
+}
