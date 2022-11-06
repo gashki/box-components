@@ -41,7 +41,7 @@ const Switch = ({
     const classes = classNames('hui-Switch', className, { 'hui-Switch--rightAligned': isRightAligned });
     const components = [
         <div key="hui-Switch-input" className="hui-Switch-input" />,
-        <div key="hui-Switch-label" className="hui-Switch-label hui-text-ellipsis">
+        <div key="hui-Switch-label" className="hui-Switch-label hui-textEllipsis">
             {label}
         </div>,
     ];
