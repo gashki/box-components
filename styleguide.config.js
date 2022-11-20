@@ -3,7 +3,7 @@ const path = require('path');
 const sections = [
     {
         name: 'Colors',
-        content: 'examples/colors.md',
+        content: 'src/styles/colors.md',
     },
     {
         name: 'Components',
@@ -25,7 +25,7 @@ const getComponentPathLine = componentPath => {
 module.exports = {
     getComponentPathLine,
     pagePerSection: true,
-    require: ['/examples/styles.scss'],
+    require: ['/src/styles/examples.scss'],
     sections,
     title: 'Hinker UI',
     webpackConfig: {

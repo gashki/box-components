@@ -9,7 +9,7 @@ Color choices should meet [WCAG 2.0 AA guidelines](https://www.w3.org/TR/UNDERST
 \* _against white (#fff) background_
 
 ```jsx
-const colors = require('/src/styles/constants/colors');
+const colors = require('./colors');
 const swatches = {};
 
 Object.entries(colors).forEach(([color, value]) => {
