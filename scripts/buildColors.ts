@@ -4,7 +4,7 @@ const { parse } = require('sass-variable-parser');
 const { camelCase } = require('lodash');
 
 const inputFile = 'src/styles/constants/_colors.scss';
-const outputFile = 'src/styles/constants/colors.ts';
+const outputFile = 'src/styles/colors.ts';
 
 const colorsFile = readFileSync(inputFile, { encoding: 'utf8' });
 const colorsDict = parse(colorsFile, { camelCase: false });
