@@ -1,19 +1,21 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import { SwitchAlignment } from './types';
+
 import './Switch.scss';
 
 export interface SwitchProps {
-    /** If `true`, the component is checked */
-    checked?: boolean;
+    /** Horizontal alignment of the component */
+    alignment?: SwitchAlignment;
     /** Custom CSS class for the component */
     className?: string;
     /** Text or element to be used as a description */
     description?: React.ReactNode;
+    /** If `true`, the component is checked */
+    isChecked?: boolean;
     /** If `true`, the component is disabled */
-    disabled?: boolean;
-    /** If `true`, the component is aligned to the right */
-    isRightAligned?: boolean;
+    isDisabled?: boolean;
     /** Text or element to be used as a label */
     label: React.ReactNode;
     /** Name attribute for the form control */
@@ -27,18 +29,20 @@ export interface SwitchProps {
 }
 
 const Switch = ({
-    checked,
+    alignment = SwitchAlignment.LEFT,
     className,
     description,
-    disabled,
-    isRightAligned = false,
+    isChecked,
+    isDisabled,
     label,
     name,
     onBlur,
     onChange,
-    ...rest
+    value,
 }: SwitchProps) => {
-    const classes = classNames('hui-Switch', className, { 'hui-Switch--rightAligned': isRightAligned });
+    const isRightAligned = alignment === SwitchAlignment.RIGHT;
+
+    const classes = classNames('hui-Switch', className, { 'hui-Switch--right': isRightAligned });
     const components = [
         <div key="hui-Switch-input" className="hui-Switch-input" />,
         <div key="hui-Switch-label" className="hui-Switch-label hui-textEllipsis">
@@ -54,14 +58,14 @@ const Switch = ({
         <div className={classes}>
             <label className="hui-Switch-field">
                 <input
-                    checked={checked}
+                    checked={isChecked}
                     className="hui-Switch-checkbox"
-                    disabled={disabled}
+                    disabled={isDisabled}
                     name={name}
                     onBlur={onBlur}
                     onChange={onChange}
                     type="checkbox"
-                    {...rest}
+                    value={value}
                 />
                 {components}
             </label>
