@@ -7,7 +7,7 @@ $Switch-width: $Switch-height * 2;
     margin-bottom: $hui-grid-unit * 5;
 }
 
-.hui-Switch--rightAligned {
+.hui-Switch--right {
     .hui-Switch-label {
         margin-right: auto;
     }
@@ -16,7 +16,7 @@ $Switch-width: $Switch-height * 2;
 .hui-Switch-field {
     display: flex;
 
-    .hui-Switch--rightAligned & {
+    .hui-Switch--right & {
         width: 100%;
     }
 }
@@ -49,7 +49,7 @@ $Switch-width: $Switch-height * 2;
         height: 100%;
         background-color: $hui-gray-30;
         border-radius: $Switch-height;
-        transition: background 0.4s;
+        transition: background-color 0.4s;
     }
 
     &::after {
@@ -68,7 +68,7 @@ $Switch-width: $Switch-height * 2;
 
     .hui-Switch-checkbox:checked ~ & {
         &::before {
-            background-color: $hui-blue;
+            background-color: $hui-primary-color;
         }
 
         &::after {
@@ -94,7 +94,7 @@ $Switch-width: $Switch-height * 2;
 
     .hui-Switch-checkbox:focus ~ & {
         &::after {
-            border-color: $hui-blue;
+            border-color: $hui-primary-color;
         }
     }
 }
@@ -104,7 +104,7 @@ $Switch-width: $Switch-height * 2;
     margin-left: $Switch-width + ($hui-grid-unit * 2);
     color: $hui-gray-50;
 
-    .hui-Switch--rightAligned & {
+    .hui-Switch--right & {
         margin-left: 0;
     }
 }

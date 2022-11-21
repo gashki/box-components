@@ -20,8 +20,8 @@
 
 ```jsx
 <Switch
+    alignment="right"
     description="This is a right aligned uncontrolled switch"
-    isRightAligned
     label="Right Aligned Switch"
     name="Switch-example-3"
 />
@@ -30,22 +30,22 @@
 **Controlled**
 
 ```jsx
-const [checked, setChecked] = React.useState(false);
+const [isChecked, setIsChecked] = React.useState(false);
 
 <>
     <Switch
-        checked={checked}
         description="This is a controlled switch"
+        isChecked={isChecked}
         label="Controlled Switch"
         name="Switch-example-4"
-        onChange={() => setChecked(!checked)}
+        onChange={() => setIsChecked(!isChecked)}
     />
     <Switch
-        checked={!checked}
         description="This is a controlled switch with an inverse value"
+        isChecked={!isChecked}
         label="Inverted Controlled Switch"
         name="Switch-example-5"
-        onChange={() => setChecked(!checked)}
+        onChange={() => setIsChecked(!isChecked)}
     />
 </>;
 ```
@@ -53,5 +53,5 @@ const [checked, setChecked] = React.useState(false);
 **Disabled**
 
 ```jsx
-<Switch disabled label="Disabled Switch" name="Switch-example-6" />
+<Switch isDisabled label="Disabled Switch" name="Switch-example-6" />
 ```
