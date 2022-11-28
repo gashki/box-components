@@ -8,7 +8,7 @@ const sections = [
     {
         name: 'Components',
         description: '',
-        components: () => ['src/components/switch/Switch.tsx'],
+        components: () => ['src/components/loading-indicator/LoadingIndicator.tsx', 'src/components/switch/Switch.tsx'],
         sectionDepth: 1,
         usageMode: 'expand',
     },

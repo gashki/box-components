@@ -1,0 +1,88 @@
+@import '../../styles/variables';
+
+.hui-LoadingIndicator {
+    position: relative;
+}
+
+.hui-LoadingIndicator-overlay {
+    display: flex;
+    justify-content: center;
+
+    .hui-LoadingIndicator--bottom &,
+    .hui-LoadingIndicator--middle &,
+    .hui-LoadingIndicator--top & {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .hui-LoadingIndicator--bottom & {
+        align-items: flex-end;
+    }
+
+    .hui-LoadingIndicator--middle & {
+        align-items: center;
+    }
+
+    .hui-LoadingIndicator--top & {
+        align-items: flex-start;
+    }
+
+    .hui-LoadingIndicator.hui-is-blurred & {
+        background-color: rgba($hui-gray-02, 0.75);
+    }
+
+    .hui-LoadingIndicator.hui-is-hidden & {
+        background-color: $hui-white;
+    }
+}
+
+// TODO: Consider an alternative to `transform` for resizing the animation
+.hui-LoadingIndicator-pulse {
+    .hui-LoadingIndicator--small & {
+        transform: scale(0.7);
+    }
+
+    .hui-LoadingIndicator--medium & {
+        transform: scale(1.5);
+    }
+
+    .hui-LoadingIndicator--large & {
+        transform: scale(2);
+    }
+
+    div {
+        display: inline-block;
+        width: 2px;
+        height: 10px;
+        background-color: $hui-primary-color;
+        border-radius: $hui-borderRadius;
+        animation: hui-LoadingIndicator-animation 0.66s infinite ease-in-out;
+
+        &:nth-child(2) {
+            margin-left: 2px;
+            animation-delay: 0.1s;
+        }
+
+        &:nth-child(3) {
+            margin-left: 2px;
+            animation-delay: 0.2s;
+        }
+    }
+}
+
+@keyframes hui-LoadingIndicator-animation {
+    0%,
+    80%,
+    100% {
+        transform: scaleY(1.2);
+        opacity: 0.5;
+    }
+
+    40% {
+        transform: scaleY(1.6);
+        opacity: 1;
+    }
+}
