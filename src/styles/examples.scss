@@ -16,3 +16,13 @@
     margin-bottom: $hui-grid-unit;
     border-radius: $hui-borderRadius;
 }
+
+.hui-LoadingIndicator-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-height: 500px;
+    }
+}
