@@ -1,2 +1,2 @@
 export { default } from './Switch';
-export { SwitchAlignment } from './types';
+export * from './types';
