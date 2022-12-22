@@ -47,7 +47,7 @@ $Switch-width: $Switch-height * 2;
     &::before {
         width: 100%;
         height: 100%;
-        background-color: $hui-gray-30;
+        background-color: $hui-gray-20;
         border-radius: $Switch-height;
         transition: background-color 0.4s;
     }
@@ -56,8 +56,9 @@ $Switch-width: $Switch-height * 2;
         width: $Switch-height;
         height: 100%;
         background-color: $hui-white;
-        border: 1px solid $hui-gray-50;
+        border: 1px solid $hui-gray-30;
         border-radius: 50%;
+        box-shadow: 0 1px 3px rgba($hui-black, 0.2);
         transition: margin 0.4s;
     }
 
@@ -83,7 +84,7 @@ $Switch-width: $Switch-height * 2;
         }
 
         &::before {
-            opacity: 0.5;
+            opacity: 0.6;
         }
 
         &::after {
